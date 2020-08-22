@@ -53,3 +53,21 @@ function validation3()
 
 read -p "enter email :"  email
 validation3 $email $EmailPattern
+
+
+
+MobileNumberPattern="^[+]{1}[1-9]{2}[ ][0-9]{10}$"
+
+function validation4()
+{
+	if [[ $mubileNumber =~ $MobileNumberPattern ]]
+	then
+	       echo "valid Mobile Number"
+	else
+		echo "Invalid Mobile Number"
+
+fi
+}
+
+read -p "Enter The Mobile Number With Country Code:" mobileNumber
+validation4 $mobileNumber $MobileNumberPattern
