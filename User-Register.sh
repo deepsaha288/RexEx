@@ -122,3 +122,25 @@ read -p "Enter The Password Minimum Eight Character:" password
 validation7 $password $checkNum
 
 
+
+PasswordLength="^[A-Za-z]{8,}$"
+
+passUperCase="^[A-Za-z]{8,}$"
+
+checkNum="^[0-9A-Za-z]{8,}$"
+
+
+passPattern="^[A-Z]{1,}[a-z]{4,}[*&^%$#@!+=]{1}[0-9]{1,}$"
+
+function validation8()
+{
+        if [[ $password =~ $PasswordLength && $passwod =~ $passUperCase && $password =~ $checkNum && $password =~ $passPattern ]]
+	then
+	       echo "valid"
+	else
+		echo "Invalid "
+
+fi
+}
+read -p "Enter The Password Minimum Eight Character:" password
+validation8 $password $PasswordLength $passUperCase $checkNum $spChar 
