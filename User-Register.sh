@@ -104,3 +104,21 @@ fi
 }
 read -p "Enter The Password Minimum Eight Character:" password
 validation6 $password $passUperCase
+
+
+checkNum="^[0-9A-Za-z]{8,}$"
+
+function validation7()
+{
+        if [[ $password =~ $checkNum ]]
+	then
+	       echo "valid and matched password"
+	else
+		echo "Invalid and not mateched passowd"
+
+fi
+}
+read -p "Enter The Password Minimum Eight Character:" password
+validation7 $password $checkNum
+
+
