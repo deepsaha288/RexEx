@@ -71,3 +71,21 @@ fi
 
 read -p "Enter The Mobile Number With Country Code:" mobileNumber
 validation4 $mobileNumber $MobileNumberPattern
+
+
+
+PasswordLength="^[A-Za-z]{8,}$"
+
+function validation5()
+{
+	if [[ $password =~ $PasswordLength ]]
+	then
+	       echo "valid password"
+	else
+		echo "Invalid passord"
+
+fi
+}
+
+read -p "Enter The Password Minimum Eight Character:" password
+validation4 $password $PasswordLength
