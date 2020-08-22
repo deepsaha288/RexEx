@@ -89,3 +89,18 @@ fi
 
 read -p "Enter The Password Minimum Eight Character:" password
 validation4 $password $PasswordLength
+
+
+passUperCase="^[A-Za-z]{8,}$"
+function validation6()
+{
+        if [[ $password =~ $passUperCase ]]
+	then
+	       echo "valid password"
+	else
+		echo "Invalid passowd"
+
+fi
+}
+read -p "Enter The Password Minimum Eight Character:" password
+validation6 $password $passUperCase
