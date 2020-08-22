@@ -34,3 +34,22 @@ function validation2()
 
 read -p "enter last name:" lastName
 validation2 $lastName $LastNamePattern
+
+
+
+EmailPattern="^[0-9a-zA-Z]+([._+-][0-9a-zA-Z]+)*@[0-9a-zA-Z]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2})*$"
+
+function validation3()
+{
+             if [[ $email =~ $EmailPattern ]]
+        then
+               echo "valid EmailId "
+        else
+               echo "Invalid EmailId "
+
+        fi
+
+}
+
+read -p "enter email :"  email
+validation3 $email $EmailPattern
